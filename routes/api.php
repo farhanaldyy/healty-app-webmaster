@@ -16,5 +16,7 @@ use App\User;
 |
 */
 
-
+// route login
 Route::post('login', 'Api\UserController@login');
+// route register
+Route::post('register', 'Api\UserController@register');
