@@ -32,7 +32,7 @@
 
   <!-- Preloader -->
   <div class="preloader flex-column justify-content-center align-items-center">
-    <img class="animation__shake" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+    <img class="animation__shake" src="dist/img/logo.png" alt="AdminLTELogo" height="60" width="150">
   </div>
 
   <!-- Navbar -->
@@ -55,9 +55,8 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
-      <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">AdminLTE 3</span>
+    <a href="{{route('home')}}" class="brand-link">
+      <img src="dist/img/logo_white.png" alt="AdminLTE Logo" style="opacity: .8" height="50" width="160">
     </a>
 
     <!-- Sidebar -->
@@ -94,6 +93,46 @@
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Dashboard
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{ route('poli.index') }}" class="nav-link">
+              <i class="nav-icon fas fa-hospital"></i>
+              <p>
+                Data Poli
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{ route('home') }}" class="nav-link">
+              <i class="nav-icon fas fa-user-md"></i>
+              <p>
+                Data Dokter
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{ route('home') }}" class="nav-link">
+              <i class="nav-icon fas fa-clipboard-list"></i>
+              <p>
+                Jadwal Dokter
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{ route('home') }}" class="nav-link">
+              <i class="nav-icon fas fa-hospital-user"></i>
+              <p>
+                Data Pasien
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{ route('home') }}" class="nav-link">
+              <i class="nav-icon fas fa-calendar-check"></i>
+              <p>
+                Booking Appointment
               </p>
             </a>
           </li>
@@ -194,5 +233,12 @@
 <script src="{{ asset('dist/js/demo.js') }}"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="{{ asset('dist/js/pages/dashboard.js') }}"></script>
+<!-- bs-custom-file-input -->
+<script src="{{ asset('plugins/bs-custom-file-input/bs-custom-file-input.min.js') }}"></script>
+<script>
+$(function () {
+  bsCustomFileInput.init();
+});
+</script>
 </body>
 </html>

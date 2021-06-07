@@ -20,3 +20,4 @@ use App\User;
 Route::post('login', 'Api\UserController@login');
 // route register
 Route::post('register', 'Api\UserController@register');
+Route::get('poli', 'Api\PoliController@index');

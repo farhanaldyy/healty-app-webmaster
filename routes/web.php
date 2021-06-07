@@ -19,3 +19,4 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home'); //memanggil home controller
 Route::resource('/user', 'UserController'); //memanggil controller user
+Route::resource('/poli', 'PoliController'); //memanggil controller poli
