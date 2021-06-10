@@ -105,7 +105,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{ route('home') }}" class="nav-link">
+            <a href="{{ route('dokter.index') }}" class="nav-link">
               <i class="nav-icon fas fa-user-md"></i>
               <p>
                 Data Dokter
@@ -113,7 +113,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{ route('home') }}" class="nav-link">
+            <a href="{{ route('jadwaldokter.index') }}" class="nav-link">
               <i class="nav-icon fas fa-clipboard-list"></i>
               <p>
                 Jadwal Dokter
@@ -121,7 +121,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{ route('home') }}" class="nav-link">
+            <a href="#" class="nav-link">
               <i class="nav-icon fas fa-hospital-user"></i>
               <p>
                 Data Pasien

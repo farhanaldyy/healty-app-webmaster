@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Poli;
+use App\JadwalDokter;
 
-class poliController extends Controller
+class JadwalDokterController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +14,9 @@ class poliController extends Controller
      */
     public function index()
     {
-        // variabel user dan mengambil semua data user
-        $user['listPoli'] = Poli::all(); // select data user
-        return view('poli')->with($user);
+        // variabel user dan mengambil semua data jadwal dokter
+        $user['listJadwalDokter'] = JadwalDokter::all();
+        return view('jadwaldokter')->with($user);
     }
 
     /**
@@ -37,22 +37,11 @@ class poliController extends Controller
      */
     public function store(Request $request)
     {
-        // dd($request->all());die(); // melihar array data yang dikirim
-
-        // upload file image
-        $file = '';
-        if($request->image->getClientOriginalName()) {
-            // proses
-            $file = str_replace(' ', '', $request->image->getClientOriginalName());
-            $fileName = date('mYdHs').rand(1,999).''.$file;
-            $request->image->storeAs('public/poli', $fileName);
-        }
-
         // input data kedalam database
-        $user = Poli::create(array_merge($request->all(), [
-            'image' => $fileName
+        $user = JadwalDokter::create(array_merge($request->all(), [
         ]));
-        return redirect('poli');
+        return redirect('jadwaldokter');
+        // dd($request->all());die();
     }
 
     /**
